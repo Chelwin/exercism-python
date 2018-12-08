@@ -2,19 +2,17 @@
 # -*- coding: utf-8 -*-
 """
 Created on 20181205
-@author: vsanc
+@author: chelwin
 """
-import string
+#import only the bare essentials so that you don't 
+#inadvertantly mix up the local variables.
+from string import ascii_lowercase
 def is_pangram(sentence):
-    print(sentence)
-    isPangram = False
-    lowercase = ""
-    for ch in sentence:
-        if ch.isalpha():
-            if str.lower(ch) not in lowercase:
-                lowercase += str.lower(ch)
+    alpha = set(ascii_lowercase)
+#use the method of class set to check if a set is the
+#subset of a string. Now the logic is beyond me.
+    return alpha.issubset(sentence.lower())
 
-    if len(string.ascii_lowercase) == len(lowercase):
-        isPangram = True
-    print(lowercase)
-    return isPangram 
+
+s = is_pangram("abc def ghi jlk mon prq stu vxw zy.")
+print(s)
