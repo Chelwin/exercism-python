@@ -1,0 +1,7 @@
+[user]
+    name = Sanchi Vaishnavi
+    email = sanchivaishnavi@gmail.com
+    username = Chelwin
+[alias]
+    apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached
+
