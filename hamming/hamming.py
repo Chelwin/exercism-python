@@ -10,9 +10,8 @@ Created on Friday, 26 April 2019 at 14:59:03
 def distance(strand_a,strand_b):
     if len(strand_a) != len(strand_b):
         raise ValueError("Both strands must be of the same length.")
-    else:
-        DNATuple = list(zip(strand_a, strand_b))
-        return sum([1 for elem in DNATuple if elem[0]!=elem[1]])
+
+    return sum([1 for ch1, ch2 in zip(strand_a, strand_b) if ch1 != ch2])
 
 
 
