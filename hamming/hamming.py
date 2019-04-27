@@ -6,20 +6,26 @@ Created on Friday, 26 April 2019 at 14:59:03
 
 @author: vsanc
 """
-import string
 
-def distance(strand_a, strand_b)->int: 
-    space_strand = 0    
-    if len(strand_a) == len(strand_b):
-        for index in range(len(strand_a)):
-            if strand_a[index] != strand_b[index]:
-                space_strand += 1
-    else: 
-        raise ValueError("The identical DNA strands are not of the same length!")
-    return space_strand
+def distance(strand_a,strand_b):
+    if len(strand_a) != len(strand_b):
+        raise ValueError("Both strands must be of the same length.")
+    else:
+        DNATuple = list(zip(strand_a, strand_b))
+        return sum([1 for elem in DNATuple if elem[0]!=elem[1]])
 
 
-#strand_a = "GGCCTACTAACGGGAT"
-#strand_b = "CATCGTAATGACGGCCT"
-#print(strand_a + "\n" + strand_b + "\n" + str(distance(strand_a,strand_b)))
+
+
+######## TEST SUITE #########
+
+#Raises a ValueError and exits process
+strand_a = "AGTACTATA"
+strand_b = "ACTAGTATAA"
+print(strand_a + "\n" + strand_b + "\n" + str(distance(strand_a,strand_b)))
+
+#Prints the number of differences
+strand_a = "AGTACTATA"
+strand_b = "ACTAGTATA"
+print(strand_a + "\n" + strand_b + "\n" + str(distance(strand_a,strand_b)))
 

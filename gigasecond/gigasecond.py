@@ -3,7 +3,7 @@
 from math import floor
 from datetime import datetime
 
-def add_gigasecond(birth_date):
+def eins_add_gigasecond(birth_date):
     giga_float_years = pow(10,9)/(60*60*24*365)
     birth_date_float_years = birth_date.year+(birth_date.month/12)
     +(birth_date.day/30)+(birth_date.hour/24)
@@ -29,3 +29,16 @@ def add_gigasecond(birth_date):
     
     
     return datetime(years,months,days,hours,minutes,seconds)
+
+def is_leap_year()
+
+def zwei_add_gigasecond(birth_date):
+    """Returns time when the birth_date completes 10 billion seconds.
+   
+    Keyword arguments;
+    birth_date -- an object of class datetime
+    
+    Considering the leap years as distinct from the average years,
+    include the method for distinguishing an calculating the number of 
+    leap years in a given birth_date's lifetime.
+    """    
