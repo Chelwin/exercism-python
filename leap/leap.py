@@ -20,7 +20,7 @@ def is_leap_year(year):
 # TEST SUITE #
 data = []
 true = []
-file_name = "leap.in"
+file_name = input("Enter path containing the leap years: ")
 
 try:
     fh = open(file_name, 'r')
@@ -30,9 +30,7 @@ else:
     for new in fh:
         if new != '\n':
             addIt = new[:-1].split(',')   # remove trailing new line char
-#            print(addIt)
             data.extend(addIt)
-#   print(data)
 finally:
     fh.close()
 
