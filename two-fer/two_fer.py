@@ -6,8 +6,5 @@ Created on Thursday, 2 May 2019 at 12:27:35
 """
 
 
-def two_fer(name=""):
-    first = "One for "
-    last = ", one for me."
- 
-    return first + name + last if name else first + "you" + last
+def two_fer(name="you"):
+    return f"One for {name}, one for me."
