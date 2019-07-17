@@ -1,4 +1,4 @@
-#!usr/bin/env python3
+#! /usr/bin/env python3
 # -*- coding:utf-8 -*-
 """
 Created on Friday, 5 July 2019 at 12:22:27
@@ -16,8 +16,8 @@ def latest(scores):
 def personal_best(scores):
     """ Return the the high score.  
     """
-    return sorted(scores, reverse=True)[0]
-
+#    return sorted(scores, reverse=True)[0]
+    return max(scores)
 
 def personal_top_three(scores):
     """ Return the three highest scores. 
